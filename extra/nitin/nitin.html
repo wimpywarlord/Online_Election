@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial scale=1.0>
+    <meta name="author" content="Nitin Vankadari">
+    <title>Form</title>
+</head>
+
+<style>
+    body {
+        background-color: darkblue;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        font-size: 45px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        background-image: url("nitin.jpg");
+    }
+
+    #checkbox {
+        text-align: left;
+        margin-left: 25px;
+        font-size: 18px;
+    }
+
+    .borderbox {
+        display: inline-block;
+        border: 1px solid white;
+        background-color: rgba(45, 62, 80, 0.7);
+        width: 35%;
+        text-align: center;
+        min-width: 330px;
+    }
+
+    .box {
+        display: inline-block;
+        border: none;
+        background-color: white;
+        color: black;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        width: 90%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        border-radius: 10px;
+    }
+
+    #welcome {
+        text-align: left;
+        margin-left: 40px;
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .inputs {
+        border-radius: 30px;
+        width: 90%;
+        height: 40px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        padding-left: 20px;
+    }
+
+    #submit {
+        background-color: rgb(17, 182, 17);
+        color: white;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        border-width: 0;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+</style>
+
+<body>
+    SIGN UP
+    <br>
+    <div class="borderbox">
+        <div class="box">
+            <p id="welcome">WELCOME</p>
+            <form>
+                <input type="text" class="inputs" placeholder="User Name" />
+                <br>
+                <input type="email" class="inputs" placeholder="Email" />
+                <br>
+                <input type="password" class="inputs" placeholder="Password" />
+                <br>
+                <input type="password" class="inputs" placeholder="Confirm Password" />
+                <br>
+                <input style="margin-bottom: 0;" type="tel" class="inputs" placeholder="Phone No" />
+                <p id="checkbox">
+                    <input type="checkbox" /> I want to recieve updates and newsletters
+                </p>
+                <button id="submit">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

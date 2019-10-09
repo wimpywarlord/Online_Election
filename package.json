@@ -1,0 +1,30 @@
+{
+  "name": "online_election",
+  "version": "1.0.0",
+  "description": "A online election platform.Make yourself count.",
+  "main": "backend.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimpywarlord/online_election.git"
+  },
+  "keywords": [
+    "online",
+    "election"
+  ],
+  "author": "Kshitij Dhyani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wimpywarlord/online_election/issues"
+  },
+  "homepage": "https://github.com/wimpywarlord/online_election#readme"
+}
