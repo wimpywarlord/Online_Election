@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 app.get("/",function(req,res)
 	{
-		res.send("HI THERE");
+		res.render("login.ejs");
 	}
 	);
 app.get("/signup",function(req,res)
@@ -23,6 +23,10 @@ app.post("/newuser",function(req,res){
 	console.log(req.body);
 	res.send("sadasdasda");
 });
+app.post("/login",function(req,res)
+	{
+		res.send("asdasdhaskdj a");
+	});
 app.get("/feed",function(req,res){
 		res.render("feed.ejs");
 	});
