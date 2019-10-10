@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Election form</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: url('bg.jpg') no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.card{
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(28,39,50,0.97);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+  width: 48%;
+}
+.input-fields .input{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border: 2px solid #465c74;
+  padding: 10px;
+  color: #465c74;
+  width: 100%;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #465c74;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #465c74;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #465c74;
+}
+
+.btn {
+  margin-top: 15px;
+    background: #2d3e50;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  .card{
+    flex-direction: column;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+  .btn{
+    margin-top:5px;
+  }
+}
+
+   .input{
+      border-radius: 25px;
+      border: 2px solid #609;
+      padding: 20px;
+      width: 200px;
+      height: 15px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+    <div class="input-fields">
+      <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Motive">
+      <input type="text" class="input" placeholder="Contender">
+    </div>
+    <div class="msg">
+      <div class="btn">back</div>
+      <br>
+      <div class="btn">send</div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

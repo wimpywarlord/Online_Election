@@ -2,8 +2,97 @@
 <html>
 <head>
 	<title>Feed</title>
-</head>
-<body bgcolor="#34495E">
+	<link rel="stylesheet" type="text/css" href="<%=bootstrap%>">
+	<style type="text/css">
+		body
+		{
+			background-color :#34495E;
+		}
+		.navbar{ 
+		    background-image: none;
+		    background-color:#2C3E50;
+		}	
+		.navbar-brand mb-0 h1
+		{
+			color: white;
+		}
+		#nav_box
+		{
+			/*border: 2px solid red;*/
+			display: flex;
+ 		 	justify-content: space-between;		
+ 		 	width: 100%;
+ 		 	background-color:#2C3E50;
+ 		 	padding: 0px;
+		}
+		a
+		{
+			color: white;
+		}
+		#my_club
+		{
+			font-size: 30px;
+			margin-right: 25px;
+			padding: 0px;
+		}
+		#host_text
+		{
+			font-size: 25px;
+		}
+		#feed_box
+		{
+			padding: 70px;
+		}
+		#feed_view
+		{
+			background-color: #2C3E50 ;
+			padding :60px;
+			padding-right: 150px;
+			padding-left: 150px;
+		}
+		#feed_post
+		{
+			background-color: #F7F9F9;
+			padding :60px;
+		}
+		.show
+		{
+			border :2px solid red;
+		}
+	</style>
 
+</head>
+<body >
+	<div id="nav_box">
+		<nav class="navbar navbar-dark">
+	  		<span class="navbar-brand mb-0 h1" id="my_club">VinnovateIT</span>
+	  		<a href="/host" class="text-decoration-none" ><span id="host_text" class="nav-link">Host</span></a>
+		</nav> 
+	</div>
+	<div id="feed_box">
+		<div class="container" id="feed_view">
+			<div class="container" id="feed_post">
+				<div class="row show">
+					<p><%= posts.title %></p>
+				</div>
+				<div class="row show">
+					<p><%= 154%></p>
+				</div>
+				<div class="row show">
+					<div class="col-lg-6 show" >
+						as
+					</div>
+					<div class="col-lg-6 show">dasds</div>
+				</div>
+				<div class="row show">
+					<div class="col-lg-6 show" >
+						as
+					</div>
+					<div class="col-lg-6 show">dasds</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

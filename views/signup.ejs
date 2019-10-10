@@ -84,6 +84,10 @@
         margin-bottom: 0px;
         font-size: 70px;
     }
+    #yo
+    {
+        margin-bottom: 0;
+    }
 </style>
 
 <body>
@@ -101,10 +105,9 @@
                 <br>
                 <input type="password" class="inputs" placeholder="Confirm Password" />
                 <br>
-                <input style="margin-bottom: 0;" type="tel" class="inputs" placeholder="Phone No" />
+                <input name="phone" id="yo" type="text" class="inputs" placeholder="Phone No" />
                 <p id="checkbox">
                     <input type="checkbox" /> I want to recieve updates and newsletters.
-                    <%= backgroundImg %>
                 </p>
                 <button id="submit">SIGN UP</button>
             </form>
