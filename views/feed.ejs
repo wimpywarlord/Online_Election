@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Feed</title>
+	<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Bree+Serif&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<%=bootstrap%>">
 	<style type="text/css">
 		body
@@ -54,11 +56,44 @@
 		{
 			background-color: #F7F9F9;
 			padding :60px;
+			border-top-right-radius:15px;
+			border-top-left-radius:15px;
+			border-bottom-right-radius:15px;
+			border-bottom-left-radius:15px;
+			margin-bottom: 20px;
 		}
 		.show
 		{
-			border :2px solid red;
+			/*border: 2px solid red;*/
 		}
+		#yolo
+		{
+			 display: flex;
+			 padding-top: 35px;
+  			justify-content: center;
+		}
+		#title_of_post
+		{
+			font-size: 30px;
+			font-family: 'Anton', sans-serif;
+			padding-left: 10px;
+		}
+		#motive_of_post_box
+		{
+			padding-left:10px; 
+		}
+		#motive_of_post
+		{
+			font-size: 20px;
+			font-family: 'Anton', sans-serif;
+			font-family: 'Bree Serif', serif;
+		}
+		input
+		{
+			font-family: 'Anton', sans-serif;
+			font-family: 'Bree Serif', serif;
+		}
+
 	</style>
 
 </head>
@@ -71,26 +106,44 @@
 	</div>
 	<div id="feed_box">
 		<div class="container" id="feed_view">
+			<%for(var i=0 ; i<poopoo.length ; i++){%>
 			<div class="container" id="feed_post">
-				<div class="row show">
-					<p><%= posts.title %></p>
+					<form action="/feed/<%=poopoo[i].title%>" method="POST">
+						<div class="row show">
+							<p id="title_of_post"><%= poopoo[i].title %></p>
+						</div>
+						<div class="row show" id="motive_of_post_box">
+							<p id="motive_of_post"><%= poopoo[i].motive %></p>
+						</div>
+							<div class="row show">
+								<div class="col-lg-6 show" >
+									<input type="radio"  value="contender1" name="contender">
+									<label><%= poopoo[i].contender1 %></label>
+								</div>
+								<div class="col-lg-6 show"> 
+									<input type="radio"  value="contender2" name="contender">		
+									<label><%= poopoo[i].contender2 %></label> 
+								</div>
+							</div>
+							<div class="row show">
+								<div class="col-lg-6 show" >
+									<input type="radio"  value="contender3" name="contender">
+									<label><%= poopoo[i].contender3 %></label>
+								</div>
+								<div class="col-lg-6 show"> 	
+									<input type="radio"  value="contender4" name="contender">
+									<label><%= poopoo[i].contender4 %></label>
+								</div>
+							</div>
+							<div class="row show" id="yolo">
+								<button type="submit" class="btn btn-secondary btn-sm">Make it Count</button>
+							</div>
+							</form>
+							<br>
+							<br>
+		
 				</div>
-				<div class="row show">
-					<p><%= 154%></p>
-				</div>
-				<div class="row show">
-					<div class="col-lg-6 show" >
-						as
-					</div>
-					<div class="col-lg-6 show">dasds</div>
-				</div>
-				<div class="row show">
-					<div class="col-lg-6 show" >
-						as
-					</div>
-					<div class="col-lg-6 show">dasds</div>
-				</div>
-			</div>
+			<%}%>		
 		</div>
 	</div>
 	

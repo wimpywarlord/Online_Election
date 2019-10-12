@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=yumyum[0].title%></title>
+	<link rel="stylesheet" type="text/css" href="<%=bootstrap%>">
+	<style type="text/css">
+		body
+		{
+			background-color:  #34495E ;
+			padding-top: 100px;
+			padding-bottom: 100px;
+			padding-left: 150px;
+			padding-right: 150px;
+		}
+		#stat_box
+		{
+			background-color: #ECF0F1;
+			border-top-right-radius:15px;
+	        border-top-left-radius:15px;
+	        border-bottom-right-radius:15px;
+	        border-bottom-left-radius:15px;
+	        padding: 40px;
+
+		}
+		.show
+		{
+			/*border: 2px solid red;*/
+		}
+		#con_1
+		{
+			border: 3px solid #58D68D;
+			height: <%=yumyum[0].score_c1*5%>px;
+			width: 0px;
+			display: inline-block;
+		}
+		#con_2
+		{
+			border: 3px solid #58D68D;
+			height:  <%=yumyum[0].score_c2*5%>px;
+			width: 0px;
+			display: inline-block;
+
+		}
+		#con_3
+		{
+			border: 3px solid #58D68D;
+			height:  <%=yumyum[0].score_c3*5%>px;
+			width: 0px;
+			display: inline-block;
+		}
+		#con_4
+		{
+			border: 3px solid #58D68D;
+			height:  <%=yumyum[0].score_c4*5%>px;
+			width: 0px;
+			display: inline-block
+		}
+		.col-lg-3
+		{
+			text-align: center;
+		}
+		#back_button_box
+		{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="stat_box">
+		<div class="row">
+			<div class="col-lg-3 show">
+				<div id="con_1"></div>
+			</div>
+			<div class="col-lg-3 show">
+				<div id="con_2"></div>
+			</div>
+			<div class="col-lg-3 show">
+				<div id="con_3"></div>
+			</div>
+			<div class="col-lg-3 show">
+				<div id="con_4"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 show"><%=yumyum[0].contender1%></div>
+			<div class="col-lg-3 show"><%=yumyum[0].contender2%></div>
+			<div class="col-lg-3 show"><%=yumyum[0].contender3%></div>
+			<div class="col-lg-3 show"><%=yumyum[0].contender4%></div>
+			<br>
+			<br>
+			<div id="back_button_box">
+				<form action="/feed">
+					<button id type="submit" class="btn btn-secondary btn-lg btn-block">Back to Feed</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -32,6 +32,10 @@ var pollSchema = new mongoose.Schema({
 		contender2: String,
 		contender3: String,
 		contender4: String,
+		score_c1: Number,
+		score_c2: Number,
+		score_c3: Number,
+		score_c4: Number,
 });
 
 var user = mongoose.model("user",userSchema);
@@ -97,12 +101,68 @@ app.get("/feed",function(req,res){
 				console.log("POSTS ARE FETCHED");
 				console.log(posts);
 				res.render("feed.ejs",{
-					"posts" : posts,
+					poopoo : posts,
 					"bootstrap" : "/bootstrap.css",
 				});
 			}
 		});
 	});
+
+app.post("/feed/:vote",function(req,res){
+	console.log(req.params.vote);
+	console.log(req.body.contender); //THIS IS THE VOTE TO THE CONTENDER
+	let query = {};
+	let ccc ;
+	if(req.body.contender==="contender1")
+	{
+		ccc="score_c1"
+	}	
+	if(req.body.contender==="contender2")
+	{
+		ccc="score_c2"
+	}	
+	if(req.body.contender==="contender3")
+	{
+		ccc="score_c3"
+	}	
+	if(req.body.contender==="contender4")
+	{
+		ccc="score_c4"
+	}	
+	query[ccc] = 1 ;
+	console.log(query);
+	poll_post.findOneAndUpdate({title : req.params.vote},{ $inc : query },function(err,updated_post)
+		{
+			if(err)
+			{
+				console.log(err);
+				console.log("THE VOTE HAS NOT BEEN UPDATED");
+			}
+			else
+			{
+				console.log(updated_post.score_c1);
+				console.log("THE VOTE HAS BEEN CASTED");
+				poll_post.find({title : req.params.vote},function(err,fetched_post)				{
+					if(err)
+					{
+						console.log(err);
+						console.log("THIS MEANS THAT WHILE SHOWING STATS THE DATA WAS NOT FETCHED");
+					}
+					else
+					{
+						console.log(fetched_post);
+						console.log("THIS MEANS THAT WHILE SHWOING STATS THE DATA WAS FETCHED");
+						res.render("post_stats.ejs",{
+							yumyum : fetched_post,
+							"bootstrap" : "/bootstrap.css",
+						});
+					}
+				});
+			}
+		});
+});
+
+
 app.post("/newuser",function(req,res){
 	// console.log(newuserdetail);
 	res.send("sadasdasda");;
@@ -127,7 +187,7 @@ app.get("/host",function(req,res)
 	});
 app.post("/newpost",function(req,res){
 	console.log(req.body);
-	poll_post.create({title : req.body.title,motive : req.body.motive,contender1: req.body.contender1,contender2: req.body.contender2,contender3: req.body.contender3,contender4: req.body.contender4,},function(err,mypost){
+	poll_post.create({title : req.body.title,motive : req.body.motive,contender1: req.body.contender1,contender2: req.body.contender2,contender3: req.body.contender3,contender4: req.body.contender4,score_c1: 0 , score_c2 : 0 , score_c3 : 0 , score_c4 : 0},function(err,mypost){
 		if(err)
 		{
 			console.log("POST NOT PUSHED");

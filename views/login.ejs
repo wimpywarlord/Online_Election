@@ -35,6 +35,10 @@
         height: 450px;
         border: 1px solid;
         min-width: 350px;
+        border-top-right-radius:15px;
+        border-top-left-radius:15px;
+        border-bottom-right-radius:15px;
+        border-bottom-left-radius:15px;
     }
 
     #login {
@@ -47,6 +51,10 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 110px;
         font-weight: bold;
+        border-top-right-radius:15px;
+        border-top-left-radius:15px;
+        border-bottom-right-radius:15px;
+        border-bottom-left-radius:15px;
     }
 
     #welcome {
@@ -102,6 +110,10 @@
         color: white;
         word-wrap: break-word;
     }
+    #pass_input
+    {
+        margin-bottom: 17px;
+    }
     #heading
     {
         margin: 0px;
@@ -131,7 +143,7 @@
                     <form action="/login" method="POST">
                         <input type="text" name="username" class="input" placeholder="Username" />
                         <br><br>
-                        <input type="password" name="password" class="input" placeholder="Password" />
+                        <input id="pass_input" type="password" name="password" class="input" placeholder="Password" />
                         <br>
                         <a href="https://vinnovateit.com/">Contact Us</a> | <a href="/signup">SignUp</a>
                         <br><br>
