@@ -201,9 +201,5 @@ app.post("/newpost",function(req,res){
 		}
 	});
 });
-app.listen(process.env.PORT || 3000,function()
-	{
-		console.log("PORT HAS STARTED.");
-	});
-
+app.listen(process.env.PORT || 3000);
 
