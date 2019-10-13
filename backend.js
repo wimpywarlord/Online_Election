@@ -69,7 +69,7 @@ app.post("/login",function(req,res)
 						{
 							flag=true;
 							console.log("FOUND REG USER.");
-							res.redirect("feed");
+							res.redirect("/feed");
 						}
 					}
 					if(flag===false)
