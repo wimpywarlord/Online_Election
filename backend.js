@@ -202,6 +202,11 @@ app.post("/newpost",function(req,res){
 	});
 });
 
+
+app.get("*",function(req,res)
+{
+	res.send("THIS IS THE LAST PAGE IF NONE GET CAUGHT");
+});
 app.listen( process.env.PORT || 3000 , function(){
 	console.log("SERVER 3000 HAS STARTED");
 });
