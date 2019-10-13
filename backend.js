@@ -166,9 +166,8 @@ app.post("/feed/:vote",function(req,res){
 
 app.post("/newuser",function(req,res){
 	// console.log(newuserdetail);
-	res.send("sadasdasda");;
 	// console.log(req.body);
-	user.create({username : req.body.userName,password : req.body.password,},function(err,res){
+	user.create({username : req.body.userName,password : req.body.password,},function(err,yolo){
 		if(err)
 		{
 			console.log("DATA IS NOT PUSHED");
@@ -176,7 +175,8 @@ app.post("/newuser",function(req,res){
 		else
 		{
 			console.log("DATA HAS BEEN PUSHED");
-			console.log(res);
+			console.log(yolo);
+			res.redirect("/");
 		}
 	});
 });
