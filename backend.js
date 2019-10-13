@@ -75,6 +75,7 @@ app.post("/login",function(req,res)
 					if(flag===false)
 					{
 						console.log("USER NOT FOUND");
+						res.render("login.ejs");
 					}
 				}
 			});
