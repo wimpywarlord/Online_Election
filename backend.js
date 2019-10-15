@@ -45,7 +45,7 @@ app.get("/",function(req,res)
 	{
 		res.render("login.ejs");
 	}
-	);
+);
 app.post("/login",function(req,res)
 	{
 		user.find(function(err,users)
