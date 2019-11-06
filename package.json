@@ -8,7 +8,7 @@
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "mongoose": "^5.7.4"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {},
 "scripts": {
